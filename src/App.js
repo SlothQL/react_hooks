@@ -1,4 +1,13 @@
 import React, {useState} from "react";
+import './App.css';
+
+function Todo({todo, index}) {
+  return (
+    <div className="todo">
+      {todo.text}
+    </div>
+  )
+}
 
 function App() {
 
@@ -19,9 +28,9 @@ function App() {
   return (
     <div className="app">
       <div className="todo-list">
-        {todos.map((todo, index) => {
+        {todos.map((todo, index) => (
           <Todo key={index} index={index} todo={todo} />
-        })}
+        ))}
       </div>
     </div>
   )
